@@ -16,7 +16,7 @@ let Subtraction = (x: number, y: number): number =>
 let Division = (x: number, y: number): number =>
 {
     if (x == 0 || y == 0)
-        return 0;
+        throw new Error('Divide by zero exception')
 
     return x / y;
 }

@@ -10,7 +10,7 @@ let Subtraction = (x, y) => {
 };
 let Division = (x, y) => {
     if (x == 0 || y == 0)
-        return 0;
+        throw new Error('Divide by zero exception');
     return x / y;
 };
 console.log(`Addition(5, 5) => ${Addition(5, 5)}`);

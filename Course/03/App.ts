@@ -32,3 +32,20 @@
         return `${firstName} ${surname}`
     }
 }
+
+// Objects
+{
+    function GetFullPlayerName(PlayerEntity: { firstname: string, surname: string }): string
+    {
+        return `${PlayerEntity.firstname} ${PlayerEntity.surname}`
+    }
+
+    const Player = {
+        firstname: 'Rimuru',
+        surname: 'Tempest',
+        city: 'TempestCity',
+        age: 22
+    };
+
+    console.log(GetFullPlayerName(Player));
+}
