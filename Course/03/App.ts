@@ -49,3 +49,50 @@
 
     console.log(GetFullPlayerName(Player));
 }
+
+// Дан JSON и его нужно типизировать.
+// {
+//     "officeId": 45,
+//     "isOpened": false,
+//     "contacts": {
+//     "phone": "+79100000000",
+//         "email": "my@email.ru",
+//         "address": {
+//         "city": "Москва"
+//     }
+// }
+// }
+{
+    interface IOffice
+    {
+        OfficeId: 45;
+        IsOpened: false;
+        Contacts: IContacts;
+    }
+
+    interface IContacts
+    {
+        Phone: "+79100000000";
+        Email: "my@email.ru";
+        Address: IAddress;
+    }
+
+    interface IAddress
+    {
+        City: "Москва";
+    }
+
+    let office: IOffice = {
+        OfficeId: 45,
+        IsOpened: false,
+        Contacts: {
+            Phone: "+79100000000",
+            Email: "my@email.ru",
+            Address: {
+                City: "Москва"
+            }
+        }
+    };
+    
+    console.log(office);
+}
