@@ -17,4 +17,6 @@ function AddMoney(user: IUser, sum: number): IUser
     return user;
 }
 
-AddMoney({Name: 'Frost', Money: 10}, 5)
+const result = AddMoney({Name: 'Frost', Money: 10}, 5);
+
+console.log(result);
